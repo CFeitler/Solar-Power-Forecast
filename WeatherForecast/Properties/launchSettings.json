@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WeatherForecast": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files (x86)\\COPA-DATA\\zenon Software Platform 10\\GenericNet.exe"
+    }
+  }
+}
