@@ -11,7 +11,7 @@ Download the sources for the GenericNET driver extension. Configure the ```ApiKe
 ```csharp
   public static class Constants
   {
-    public static string ApiKey => "HjIJ576mSuPPeUP3kC_wioGKxyd6f4dR";
+    public static string ApiKey => "<your API key>";
     public static string SiteId => "e1eb-2eb1-42f9-96e9"; //Copa-Data Headquarter
     public static string BaseUrl => "https://api.solcast.com.au/";
     public static string GetRooftopSitesForecastUrl => "rooftop_sites/{0}/forecasts";
