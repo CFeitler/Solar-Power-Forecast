@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SolCast\SolCast.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CopaData.Drivers.Contracts">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\COPA-DATA\zenon Software Platform 10\DriverFramework\CopaData.Drivers.Contracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="if not exist &quot;$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\COPA-DATA\DataDir@ProgramDir32_10000)DriverExtensions\Weatherforecast&quot; mkdir &quot;$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\COPA-DATA\DataDir@ProgramDir32_10000)DriverExtensions\Weatherforecast&quot;&#xD;&#xA;copy /y &quot;$(TargetDir)\*.*&quot; &quot;$(registry:HKEY_LOCAL_MACHINE\SOFTWARE\COPA-DATA\DataDir@ProgramDir32_10000)DriverExtensions\Weatherforecast&quot;" />
+  </Target>
+
+</Project>

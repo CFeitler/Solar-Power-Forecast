@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="CopaData.Drivers.Contracts">
+      <HintPath>..\WeatherForecast\DriverExtensions\Weatherforecast\CopaData.Drivers.Contracts.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
